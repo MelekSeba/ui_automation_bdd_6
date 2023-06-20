@@ -28,17 +28,17 @@ public class Project04Steps {
 
     //                          Task01
     @Given("the user is on {string}")
-    public void user_is_on_https_techglobal_training_com_frontend_project(String url) {
+    public void the_user_is_on_https_techglobal_training_com_frontend_project(String url) {
         driver.get(url);
     }
 
     @Then("the user should see the {string} heading")
-    public void user_should_see_the_inventory_heading(String header) {
+    public void the_user_should_see_the_inventory_heading(String header) {
         Assert.assertEquals(header, project04Page.inventoryHeading.getText());
     }
 
     @And("the user should see the table with the headers below")
-    public void user_should_see_the_table_with_the_headers_below(DataTable dataTable) {
+    public void the_user_should_see_the_table_with_the_headers_below(DataTable dataTable) {
         List<String> expectedHeaders = dataTable.asList();
 
         for (int i = 0; i < expectedHeaders.size(); i++) {
@@ -48,7 +48,7 @@ public class Project04Steps {
     }
 
     @And("the user should see the table with the rows below")
-    public void user_should_see_the_table_with_the_rows_below(DataTable dataTable) {
+    public void the_user_should_see_the_table_with_the_rows_below(DataTable dataTable) {
         List<String> expectedInventoryList = dataTable.asList();
 
         for (int i = 0; i < expectedInventoryList.size(); i++) {
@@ -58,29 +58,29 @@ public class Project04Steps {
     }
 
     @And("the user should see the {string} button is enabled")
-    public void user_should_see_the_add_product_button_is_enabled(String button) {
+    public void the_user_should_see_the_add_product_button_is_enabled(String button) {
 
         Assert.assertTrue(button, project04Page.addProductButton.isEnabled());
     }
 
     @And("the user should see the {string} text displayed")
-    public void user_should_see_the_total_$_text_displayed(String totalAmount) {
+    public void the_user_should_see_the_total_$_text_displayed(String totalAmount) {
         Assert.assertEquals(totalAmount, project04Page.totalAmountText.getText());
     }
 
 
     @When("the user clicks on the {string} button")
-    public void userClicksOnTheButton(String arg0) {
+    public void theUserClicksOnTheButton(String arg0) {
         project04Page.addProductButton.click();
     }
 
     @Then("the user should see the {string} modal with its heading")
-    public void userShouldSeeTheModalWithItsHeading(String header) {
+    public void theUserShouldSeeTheModalWithItsHeading(String header) {
         Assert.assertEquals(header, project04Page.modalHeader.getText());
     }
 
     @And("the user should see the {string} label")
-    public void userShouldSeeTheLabel(String arr) {
+    public void theUserShouldSeeTheLabel(String arr) {
         switch (arr) {
             case "Please select the quantity":
                 Assert.assertEquals(arr, project04Page.productLabels.get(0).getText());
@@ -99,7 +99,7 @@ public class Project04Steps {
 
 
     @And("the user should see the {string} input box is enabled")
-    public void user_should_see_the_price_input_box_is_enabled(String input) {
+    public void the_user_should_see_the_price_input_box_is_enabled(String input) {
         switch (input) {
             case "Quantity":
                 Assert.assertTrue(input, project04Page.productInput.get(0).isEnabled());
@@ -118,7 +118,7 @@ public class Project04Steps {
     }
 
     @And("the user should see the SUBMIT button is enabled")
-    public void user_should_see_the_submit_button_is_enabled() {
+    public void the_user_should_see_the_submit_button_is_enabled() {
         Assert.assertTrue(project04Page.submitButton.isEnabled());
     }
 
@@ -136,7 +136,7 @@ public class Project04Steps {
     //     project04Page.modalXHeader.click();
     // }
     @Then("the user should not see the {string} modal")
-    public void user_should_not_see_the_add_new_product_modal(String modal) {
+    public void the_user_should_not_see_the_add_new_product_modal(String modal) {
         try {
             Assert.assertTrue(modal, project04Page.modalHeader.isDisplayed());
         } catch (NoSuchElementException e) {
@@ -146,22 +146,22 @@ public class Project04Steps {
 
     //                          Task04
     @And("the user enters the quantity as {string}")
-    public void user_enters_the_quantity_as(String quantity) {
+    public void the_user_enters_the_quantity_as(String quantity) {
         project04Page.productInput.get(0).sendKeys(quantity);
     }
 
     @And("the user enters the product as {string}")
-    public void user_enters_the_product_as(String product) {
+    public void the_user_enters_the_product_as(String product) {
         project04Page.productInput.get(1).sendKeys(product);
     }
 
     @And("the user enters the price as {string}")
-    public void user_enters_the_price_as(String price) {
+    public void the_user_enters_the_price_as(String price) {
         project04Page.productInput.get(2).sendKeys(price);
     }
 
     @Then("the user should see the table with the new row below")
-    public void user_should_see_the_table_with_the_new_row_below(DataTable dataTable) {
+    public void the_user_should_see_the_table_with_the_new_row_below(DataTable dataTable) {
         // project04Page.newAddedList.forEach(l -> Assert.assertTrue(l.isDisplayed()));
 
         List<String> expectedResult = dataTable.asList();
@@ -170,60 +170,6 @@ public class Project04Steps {
         }
     }
 
-    @And("user should see the table with the headers below")
-    public void userShouldSeeTheTableWithTheHeadersBelow() {
-
-    }
-
-    @And("user should see the {string} button is enabled")
-    public void userShouldSeeTheButtonIsEnabled(String arg0) {
-
-    }
-
-    @And("user should see the {string} text displayed")
-    public void userShouldSeeTheTextDisplayed(String arg0) {
-    }
-
-    @And("user should see the {string} label")
-    public void userShouldSeeTheLabel(String arg0) {
-        
-    }
-
-    @And("user should see the {string} input box is enabled")
-    public void userShouldSeeTheInputBoxIsEnabled(String arg0) {
-        
-    }
-
-    @Then("user should see the {string} modal with its heading")
-    public void userShouldSeeTheModalWithItsHeading(String arg0) {
-        
-    }
-
-    @When("user clicks on the {string} button")
-    public void userClicksOnTheButton(String arg0) {
-        
-    }
-
-    @And("user enters the product as {string}")
-    public void userEntersTheProductAs(String arg0) {
-        
-    }
-
-    @And("user enters the price as {string}")
-    public void userEntersThePriceAs(String arg0) {
-        
-    }
-
-    @Then("user should see the table with the new row below")
-    public void userShouldSeeTheTableWithTheNewRowBelow() {
-    }
-
-    @And("user enters the quantity as {string}")
-    public void userEntersTheQuantityAs(String arg0) {
-    }
-
-    @Then("user should not see the {string} modal")
-    public void userShouldNotSeeTheModal(String arg0) {
-    }
 }
+
 
