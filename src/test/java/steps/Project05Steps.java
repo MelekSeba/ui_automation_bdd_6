@@ -6,19 +6,19 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
-import pages.Project5Page;
+import pages.Project05Page;
 import utils.Driver;
 
 import java.util.List;
 
 public class Project05Steps {
     WebDriver driver;
-    Project5Page techGlobalFrontendProject5Page;
+    Project05Page techGlobalFrontendProject5Page;
 
     @Before
     public void setDriver() {
         driver = Driver.getDriver();
-        techGlobalFrontendProject5Page = new Project5Page();
+        techGlobalFrontendProject5Page = new Project05Page();
 
     }
     @Then("user should see the first {string} heading")
