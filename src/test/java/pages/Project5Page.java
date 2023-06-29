@@ -7,8 +7,8 @@ import utils.Driver;
 
 import java.util.List;
 
-public class TechGlobalFrontendProject5Page {
-    public TechGlobalFrontendProject5Page() {
+public class Project5Page {
+    public Project5Page() {
 
         PageFactory.initElements(Driver.getDriver(), this);
     }
