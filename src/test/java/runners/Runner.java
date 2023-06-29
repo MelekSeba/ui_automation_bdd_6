@@ -1,3 +1,4 @@
+
 package runners;
 
 import io.cucumber.junit.Cucumber;
@@ -8,8 +9,8 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features",
         glue = "steps",
-        tags = "@Task01",
-        dryRun = false,
+        tags = "@Project05",
+        dryRun = true,
         monochrome = false,
         plugin = {"pretty",
                 "html:target/cucumber-reports/Cucumber.html",
